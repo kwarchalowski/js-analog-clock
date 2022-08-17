@@ -1,0 +1,78 @@
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
+.switches {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  transform: translate(-10px, -30px) scale(0.5);
+}
+
+.toggle-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  transform: translate(370px, -130px);
+  content: none;
+  transition: 0.4s;
+}
+
+.toggle-container:nth-of-type(2) {
+  transform: translate(370px, -80px);
+}
+
+.toggle-container:nth-of-type(3) {
+  transform: translate(420px, -35px);
+}
+
+.toggle-container .toggle-text {
+  color: rgb(255, 255, 255);
+  font-family: 'Fira Code', monospace;
+  font-weight: 100;
+  font-size: 26px;
+  margin-left: 36px;
+  margin-bottom: 18px;
+}
+
+#time-checkbox:checked~.toggle-text,
+#neon-checkbox:checked~.toggle-text,
+#blink-checkbox:checked~.toggle-text {
+  color: rgb(45, 180, 243);
+  transition: 400ms;
+}
+
+/* Hide default HTML checkbox */
+#neon-switch input,
+#time-switch input,
+#blink-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 30%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+#blink-switch {
+  display: none;
+}
+
+#blink-switch.visible {
+  display: inline;
+}

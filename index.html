@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Analog Clock</title>
+    <meta name="description" content="Javascript Analog Clock">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
+    <link rel="stylesheet" href="css/analog-clock/styles.css">
+    <link rel="stylesheet" href="css/analog-clock/toggle.css">
+</head>
+
+<body>
+
+    <!-- * Analog clock begins here -->
+    <div id="clock">
+        <div id="time-txt" class="noselect"></div>
+        <div id="seconds-clock-hand"></div>
+        <div id="minutes-clock-hand"></div>
+        <div id="hours-clock-hand"></div>
+        <div id="center"></div>
+        <div class="switches">
+            <div class="toggle-container">
+                <label id="neon-switch">
+                    <input type="checkbox" id="neon-checkbox">
+                    <span class="slider"></span>
+                    <div class="toggle-text noselect">NEON</div>
+                </label>
+            </div>
+            <div class="toggle-container">
+                <label id="time-switch">
+                    <input type="checkbox" id="time-checkbox">
+                    <span class="slider"></span>
+                    <div class="toggle-text noselect">DIGITAL</div>
+                </label>
+            </div>
+            <div class="toggle-container">
+                <label id="blink-switch">
+                    <input type="checkbox" id="blink-checkbox">
+                    <span class="slider"></span>
+                    <div class="toggle-text noselect">BLINK</div>
+                </label>
+            </div>
+        </div>
+    </div>
+    <!-- * Analog clock ends here -->
+
+
+    <!-- * Clock script import -->
+    <script src="src/analog-clock.js" async defer></script>
+</body>
+
+</html>

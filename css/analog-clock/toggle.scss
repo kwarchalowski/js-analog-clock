@@ -1,0 +1,77 @@
+@import 'variables';
+
+.switches {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  transform: $switches-transform;
+}
+
+.toggle-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: $checkbox-size;
+  height: $checkbox-size;
+  transform: translate($toggles-position-x, $toggles-position-y);
+  content: none;
+  transition: $basic-transition-time;
+
+  &:nth-of-type(2) {
+    transform: translate($toggles-position-x, $toggles-position-y + $toggles-gap);
+  }
+
+  &:nth-of-type(3) {
+    transform: translate($toggles-position-x + $toggles-gap, $toggles-position-y + (2 * $toggles-gap));
+  }
+
+  .toggle-text {
+    color: $text-color;
+    font-family: $main-font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    margin-left: $toggle-text-margin * 2;
+    margin-bottom: $toggle-text-margin;
+  }
+}
+
+#time-checkbox:checked~.toggle-text,
+#neon-checkbox:checked~.toggle-text,
+#blink-checkbox:checked~.toggle-text {
+  color: $color3;
+  transition: $basic-transition-time;
+}
+
+/* Hide default HTML checkbox */
+#neon-switch input,
+#time-switch input,
+#blink-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color1;
+  border-radius: $border-radius;
+  transition: $basic-transition-time;
+}
+
+input:checked+.slider {
+  background-color: $color2;
+}
+
+#blink-switch {
+  display: none;
+
+  &.visible {
+    display: inline;
+  }
+}

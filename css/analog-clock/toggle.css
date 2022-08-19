@@ -1,45 +1,58 @@
 @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
-
 .switches {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  transform: translate(-10px, -30px) scale(0.5);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translate(-10px, -30px) scale(0.5);
+          transform: translate(-10px, -30px) scale(0.5);
 }
 
 .toggle-container {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  width: 18px;
-  height: 18px;
-  transform: translate(370px, -130px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 12px;
+  height: 12px;
+  -webkit-transform: translate(370px, -130px);
+          transform: translate(370px, -130px);
   content: none;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .toggle-container:nth-of-type(2) {
-  transform: translate(370px, -80px);
+  -webkit-transform: translate(370px, -80px);
+          transform: translate(370px, -80px);
 }
 
 .toggle-container:nth-of-type(3) {
-  transform: translate(420px, -35px);
+  -webkit-transform: translate(420px, -30px);
+          transform: translate(420px, -30px);
 }
 
 .toggle-container .toggle-text {
-  color: rgb(255, 255, 255);
-  font-family: 'Fira Code', monospace;
-  font-weight: 100;
-  font-size: 26px;
+  color: white;
+  font-family: "Fira Code", monospace;
+  font-size: 24px;
+  font-weight: 200;
   margin-left: 36px;
   margin-bottom: 18px;
 }
 
-#time-checkbox:checked~.toggle-text,
-#neon-checkbox:checked~.toggle-text,
-#blink-checkbox:checked~.toggle-text {
-  color: rgb(45, 180, 243);
-  transition: 400ms;
+#time-checkbox:checked ~ .toggle-text,
+#neon-checkbox:checked ~ .toggle-text,
+#blink-checkbox:checked ~ .toggle-text {
+  color: #2db4f3;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 /* Hide default HTML checkbox */
@@ -59,14 +72,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #cccccc;
   border-radius: 30%;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-input:checked+.slider {
-  background-color: #2196F3;
+input:checked + .slider {
+  background-color: #2196f3;
 }
 
 #blink-switch {
@@ -76,3 +89,4 @@ input:checked+.slider {
 #blink-switch.visible {
   display: inline;
 }
+/*# sourceMappingURL=toggle.css.map */

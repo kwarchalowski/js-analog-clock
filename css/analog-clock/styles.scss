@@ -1,0 +1,110 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Disable user selection
+.noselect {
+    user-select: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color4;
+}
+
+#clock {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $clock-size;
+    height: $clock-size;
+    min-width: $clock-size;
+    min-height: $clock-size;
+    transform: scale($clock-scale);
+    border: $clock-border;
+    border-radius: $clock-border-radius;
+    background-color: $color5rgba;
+    transition: $clock-transition-time;
+
+    &.neon {
+        box-shadow: $neon-dimensions $neon-color-rgba;
+    }
+
+}
+
+#seconds-clock-hand {
+    width: $hands-width;
+    height: $hands-height;
+    background-color: $hands-seconds-color;
+    position: absolute;
+    bottom: $hands-bottom;
+    transform-origin: $hands-transform-origin;
+    opacity: $hands-opacity;
+}
+
+#minutes-clock-hand {
+    width: $hands-width * 2;
+    height: $hands-height - $hands-lenght-diff;
+    background-color: $hands-minutes-color;
+    position: absolute;
+    bottom: $hands-bottom;
+    border: $hands-border;
+    transform-origin: $hands-transform-origin;
+    opacity: $hands-opacity;
+
+}
+
+#hours-clock-hand {
+    width: $hands-width * 3;
+    height: $hands-height - ($hands-lenght-diff * 1.5);
+    background-color: $hands-hours-color;
+    position: absolute;
+    bottom: $hands-bottom;
+    border: $hands-border;
+    transform-origin: $hands-transform-origin;
+    opacity: $hands-opacity;
+
+}
+
+#center {
+    position: absolute;
+    width: $center-size;
+    height: $center-size;
+    border: $hands-border;
+    border-radius: $center-border-radius;
+    background-color: $center-color;
+    opacity: $center-opacity;
+}
+
+#time-txt {
+    opacity: 0;
+    color: $color3;
+    background-color: $time-txt-bgcolor;
+    font-family: $main-font-family;
+    font-weight: $font-weight * 2.4;
+    font-size: $font-size;
+    border: $time-txt-border;
+    border-radius: $time-txt-border-radius;
+    transition-delay: $time-txt-transition-time / 4;
+    transform: translate(0px) scale(0);
+    transition: $time-txt-transition-time;
+
+    &.visible {
+        opacity: $time-txt-opacity;
+        color: $time-txt-color;
+        transform: $time-txt-transform;
+        box-shadow: $time-txt-boxshadow-dimensions $time-txt-boxshadow-color;
+        transition-delay: $time-txt-transition-time / 8;
+        transition: $time-txt-transition-time * 0.75;
+        z-index: 1;
+    }
+
+}

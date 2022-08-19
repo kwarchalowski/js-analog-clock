@@ -1,90 +1,94 @@
 @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
-
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .noselect {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
   -webkit-user-select: none;
-  /* Safari */
-  -khtml-user-select: none;
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(32, 32, 32);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #202020;
 }
 
 #clock {
-  transform: scale(1.0);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 300px;
   height: 300px;
   min-width: 300px;
   min-height: 300px;
-  border: solid 5px rgb(100, 180, 255);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  border: solid 5px #64b4ff;
   border-radius: 50%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
 #clock.neon {
   -webkit-box-shadow: 0px 0px 50px 0px rgba(100, 180, 255, 0.5);
-  -moz-box-shadow: 0px 0px 50px 0px rgba(100, 180, 255, 0.5);
-  box-shadow: 0px 0px 50px 0px rgba(100, 180, 255, 0.5);
+          box-shadow: 0px 0px 50px 0px rgba(100, 180, 255, 0.5);
 }
-
 
 #seconds-clock-hand {
   width: 2px;
   height: 120px;
-  background-color: rgb(255, 51, 0);
+  background-color: #ff3300;
   position: absolute;
   bottom: 50%;
-  transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
   opacity: 80%;
 }
 
 #minutes-clock-hand {
   width: 4px;
   height: 100px;
-  background-color: rgb(45, 180, 243);
+  background-color: #2db4f3;
   position: absolute;
   bottom: 50%;
   border: 1px solid rgba(17, 17, 17, 0.6);
-  transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
   opacity: 80%;
-
 }
 
 #hours-clock-hand {
   width: 6px;
-  height: 70px;
-  background-color: rgb(45, 180, 243);
+  height: 90px;
+  background-color: #2db4f3;
   position: absolute;
   bottom: 50%;
   border: 1px solid rgba(17, 17, 17, 0.6);
-  transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
   opacity: 80%;
-
 }
 
 #center {
@@ -93,29 +97,38 @@ body {
   height: 10px;
   border: 1px solid rgba(17, 17, 17, 0.6);
   border-radius: 50%;
-  background-color: rgb(190, 255, 244);
+  background-color: #befff4;
   opacity: 100%;
 }
 
 #time-txt {
   opacity: 0;
-  color: rgb(45, 180, 243);
-  transition: 0.4s;
+  color: #2db4f3;
+  background-color: rgba(30, 36, 39, 0.7);
+  font-family: "Fira Code", monospace;
+  font-weight: 480;
+  font-size: 24px;
+  border: 1px dotted rgba(100, 180, 255, 0.1);
+  border-radius: 5px;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  -webkit-transform: translate(0px) scale(0);
+          transform: translate(0px) scale(0);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 #time-txt.visible {
   opacity: 1;
-  color: rgb(205, 212, 218);
-  background-color: rgba(30, 36, 39, 0.7);
-  font-family: 'Fira Code', monospace;
-  font-weight: 560;
-  font-size: 24px;
-  border: 1px dotted rgba(100, 180, 255, 0.1);
-  border-radius: 5px;
-  transform: translate(0, 85px);
-
+  color: #cdd4da;
+  -webkit-transform: translate(0, 85px) scale(1);
+          transform: translate(0, 85px) scale(1);
   -webkit-box-shadow: 0px 0px 6px 0px rgba(100, 180, 255, 0.15);
-  -moz-box-shadow: 0px 0px 6px 0px rgba(100, 180, 255, 0.15);
-  box-shadow: 0px 0px 6px 0px rgba(100, 180, 255, 0.15);
+          box-shadow: 0px 0px 6px 0px rgba(100, 180, 255, 0.15);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   z-index: 1;
 }
+/*# sourceMappingURL=styles.css.map */

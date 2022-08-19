@@ -1,0 +1,66 @@
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
+// Default settings/variables
+
+// Clock
+$clock-scale: 1.0;
+$clock-size: 300px;
+$clock-border: solid 5px rgb(100, 180, 255);
+$clock-border-radius: 50%;
+$clock-transition-time: 0.6s;
+
+// Font
+$main-font-family: 'Fira Code', monospace;
+$font-size: 24px;
+$font-weight: 200;
+$text-color: rgb(255, 255, 255);
+
+// Basic colors
+$color1: rgb(204, 204, 204);
+$color2: rgb(33, 150, 243);
+$color3: rgb(45, 180, 243);
+$color4: rgb(32, 32, 32);
+$color5rgba: rgba(0, 0, 0, 0.2);
+
+// Neon
+$neon-color-rgba: rgba(100, 180, 255, 0.5);
+$neon-dimensions: 0px 0px 50px 0px;
+
+// Toggle buttons (neon, digits, blink)
+$toggle-text-margin: 18px;
+$toggles-position-x: 370px;
+$toggles-position-y: -130px;
+$toggles-gap: 50px;
+$checkbox-size: 12px;
+
+// Clock hands
+$hands-width: 2px;
+$hands-height: 120px;
+$hands-lenght-diff: 20px;
+$hands-border: 1px solid rgba(17, 17, 17, 0.6);
+$hands-seconds-color: rgb(255, 51, 0);
+$hands-minutes-color: $color3;
+$hands-hours-color: $color3;
+$hands-bottom: 50%;
+$hands-opacity: 80%;
+$hands-transform-origin: 50% 100%;
+$center-color: rgb(190, 255, 244);
+$center-size: 10px;
+$center-opacity: 100%;
+$center-border-radius: 50%;
+
+// Time-txt
+$time-txt-bgcolor: rgba(30, 36, 39, 0.7);
+$time-txt-border: 1px dotted rgba(100, 180, 255, 0.1);
+$time-txt-transition-time: 0.8s;
+$time-txt-boxshadow-color: rgba(100, 180, 255, 0.15);
+$time-txt-boxshadow-dimensions: 0px 0px 6px 0px;
+$time-txt-border-radius: 5px;
+$time-txt-color: rgb(205, 212, 218);
+$time-txt-opacity: 1;
+$time-txt-transform: translate(0, 85px) scale(1);
+
+// Misc
+$border-radius: 30%;
+$basic-transition-time: 0.4s;
+$switches-transform: translate(-10px, -30px) scale(0.5);
